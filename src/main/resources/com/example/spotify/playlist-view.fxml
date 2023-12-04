@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="578.0" prefWidth="658.0" style="-fx-background-color: #344E41;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spotify.controller.PlaylistController">
+   <children>
+      <Label fx:id="playlistNameLabel" layoutX="122.0" layoutY="24.0" prefHeight="30.0" prefWidth="249.0" text="Para fumar con Jonhy 🍫🌿" textFill="#dad7cd">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="userNameLabel" layoutX="122.0" layoutY="56.0" text="LucasFumon777" textFill="#dad7cd">
+         <font>
+            <Font name="Arial Italic" size="13.0" />
+         </font></Label>
+      <ImageView fx:id="playlistImg" fitHeight="70.0" fitWidth="86.0" layoutX="28.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/fernandito.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="deleteImg" fitHeight="24.0" fitWidth="33.0" layoutX="603.0" layoutY="72.0" onMouseClicked="#delete" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/delete.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ListView fx:id="playlistSongsList" layoutX="29.0" layoutY="108.0" prefHeight="428.0" prefWidth="598.0" style="-fx-background-color: DAD7CD;" />
+      <ImageView fx:id="updateImg" fitHeight="46.0" fitWidth="52.0" layoutX="549.0" layoutY="65.0" onMouseClicked="#update" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/ic_update.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Pane fx:id="changeNamePane" layoutX="95.0" layoutY="149.0" prefHeight="152.0" prefWidth="444.0" style="-fx-background-color: #344E41;" visible="false">
+         <children>
+            <Label layoutX="38.0" layoutY="35.0" prefHeight="17.0" prefWidth="291.0" text="Introduce el nuevo nombre para la playlist" textFill="#dad7cd">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newNameTxt" layoutX="38.0" layoutY="69.0" prefHeight="25.0" prefWidth="365.0" promptText="Federico mientras conduce" style="-fx-background-color: #f0ead2;" />
+            <Button fx:id="saveNameBtn" layoutX="351.0" layoutY="113.0" mnemonicParsing="false" onAction="#saveName" style="-fx-background-color: #ff6a4b; -fx-background-radius: 15px;" text="Guardar" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
